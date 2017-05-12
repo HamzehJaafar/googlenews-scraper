@@ -1,0 +1,50 @@
+body {
+	background-color: lightcyan;
+}
+p {
+	color:red;	
+	width:100%;
+}
+h2 {
+	text-align: center;
+	width: 100%;
+}
+#block {
+	width: 100%;
+	padding-left: 5px;
+	margin-top: 10px; 
+	border-style: solid;
+	border-width: 1px;
+	background-color: #d9ffa8;
+}
+
+
+.center {
+text-align:center;
+}
+
+
+#search {
+text-align:center;
+margin-top: 10%;
+}
+input#search {
+height:60px;
+width:200px;
+}
+
+
+#searchHead 
+{
+padding-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
