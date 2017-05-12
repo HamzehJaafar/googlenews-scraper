@@ -1,0 +1,36 @@
+<!doctype html>
+
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Google News Scraper</a></li>
+      <li><a href="{{ url_for('google')  }}">Google</a></li>
+      <li><a href="{{ url_for('facebook')  }}">Facebook</a></li>
+      <li><a href="{{ url_for('microsoft')  }}">Microsoft</a></li>
+    </ul>
+  </div>
+</nav>
+<title> {{ pageTitle  }} </title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')  }}">
+	{% for title, desc in title_list  %}
+		
+		{% if title == "google" %}
+                 <h1> Google </h1>
+		{% endif %}
+		<div class="panel panel-success">
+		<div class="panel-heading center">{{ title }}</div> 
+		<div class="panel-body"> {{ desc }} </div>
+		</div>
+	{% endfor %}
+</html>
+
+
+
+
+
+
+
+
+
