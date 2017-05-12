@@ -27,7 +27,7 @@ def scrape(term):
 @app.route('/', methods=['GET', 'POST'])
 def index(): 
     if request.method == 'POST':
-        searchTerm = request.form['search_term']
+        searchTerm = request.form['search_term'].replace(' ', '-')
         return redirect(url_for('search', search=searchTerm))
  
     return render_template("index.html", pageTitle = "Google News Webscraper")
@@ -35,7 +35,7 @@ def index():
 @app.route('/<search>', methods=['GET','POST'])
 def search(search):
     if request.method == 'POST':
-        searchTerm = request.form['search_term']
+        searchTerm = request.form['search_term'].replace(' ', '-')
         return redirect(url_for('search', search=searchTerm))
 
     return render_template("result.html", title_list = scrape(search) , pageTitle = "%s News Results"%(search))
