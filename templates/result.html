@@ -21,15 +21,15 @@
 <title> {{ pageTitle  }} </title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')  }}">
-	{% for title, desc in title_list  %}
-		
-		{% if title == "google" %}
-                 <h1> Google </h1>
-		{% endif %}
+	{% for title, desc, href in title_list  %}
+<div class='box'>		
+		<a href={{ href  }}>
 		<div class="panel panel-success">
-		<div class="panel-heading center">{{ title }}</div> 
+	
+                <div class="panel-heading center">{{ title }}</div>
 		<div class="panel-body"> {{ desc }} </div>
-		</div>
+		</div></a>
+</div>
 	{% endfor %}
 </html>
 

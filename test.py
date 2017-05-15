@@ -8,6 +8,7 @@ def scrape(term):
     keywords = [term]
     titleList = []
     descList = []
+    hrefList = []
     for search_term in keywords:
 
         req = requests.get('https://news.google.com/news?q=%s&output=rss'%(search_term))
@@ -19,15 +20,17 @@ def scrape(term):
         for i in range(len(descript)-1): 
             temp = bs4.BeautifulSoup(descript[i].get_text(), 'html.parser')
             de = temp.findAll('font', size='-1') 
+            href = temp.select('a')[0]['href']
+            hrefList.append(href)
             titleList.append(title[i+2].get_text().replace('&apos;',''))  # Cleans up description
             descList.append(de[1].getText())
 
-    return zip(titleList, descList)    
+    return zip(titleList, descList, hrefList)    
     
 @app.route('/', methods=['GET', 'POST'])
 def index(): 
     if request.method == 'POST':
-        searchTerm = request.form['search_term'].replace(' ', '-')
+        searchTerm = request.form['search_term'].replace(' ','-')
         return redirect(url_for('search', search=searchTerm))
  
     return render_template("index.html", pageTitle = "Google News Webscraper")
