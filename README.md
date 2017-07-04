@@ -8,6 +8,7 @@ GNW scrapes google news search results to impersonate a news search engine by di
 ### Prerequisites
 
 Python 2.0+
+
 Flask
 
 ### Installing
