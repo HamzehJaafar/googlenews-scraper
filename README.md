@@ -1,3 +1,5 @@
+http://hjaafar.pythonanywhere.com/
+
 # Google News Webscraper 
 
 GNW scrapes google news search results to impersonate a news search engine by displaying the top 10 trending articles of a search query.
