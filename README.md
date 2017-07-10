@@ -15,7 +15,7 @@ Flask
 
 ### Installing
 
-1) Clone or download the repository.
+Clone or download the repository.
 
 ```
 git clone https://github.com/HamzehJaafar/googlenews-scraper.git
