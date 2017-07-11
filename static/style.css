@@ -24,31 +24,15 @@ h2 {
 }
 
 .center {
-text-align:center;
+	text-align:center;
 }
 
 
 #search {
-text-align:center;
-margin-top: 10%;
+	text-align:center;
+	margin-top: 10%;
 }
 input#search {
-height:60px;
-width:200px;
+	height:60px;
+	width:200px;
 }
-
-
-#searchHead 
-{
-padding-top:10px;
-}
-
-
-
-
-
-
-
-
-
-
