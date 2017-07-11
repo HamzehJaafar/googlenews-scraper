@@ -1,43 +1,35 @@
 <!doctype html>
 
-<nav class="navbar navbar-default">
+  <nav class="navbar navbar-default">
   <div class="container-fluid">
-    
-    <ul class="nav navbar-nav">
+
+     <ul class="nav navbar-nav">
       <li class="active"><a href="/">Google News Scraper</a></li>
       <li><a href="/google">Google</a></li>
       <li><a href="/facebook">Facebook</a></li>
       <li><a href="/microsoft">Microsoft</a></li>
-   <li><div id="searchHead">
-	<form  method="post">
+      <li>
+       <div id="searchHead">
+	  <form  method="post">
        		<input name="search_term" type="text"  placeholder="New Search">
         	<button type="Submit" class="btn btn-primary btn-md">Search</button>
-	</form>
-   </div>
-</li>
+	  </form>
+         </div>
+       </li>
     </ul>
   </div>
-</nav>
-<title> {{ pageTitle  }} </title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')  }}">
+  </nav>
+  <title> {{ pageTitle  }} </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')  }}">
 	{% for title, desc, href in title_list  %}
-<div class='box'>		
+  <div class='box'>		
 		<a href={{ href  }}>
 		<div class="panel panel-success">
 	
                 <div class="panel-heading center">{{ title }}</div>
 		<div class="panel-body"> {{ desc }} </div>
 		</div></a>
-</div>
+  </div>
 	{% endfor %}
 </html>
-
-
-
-
-
-
-
-
-
