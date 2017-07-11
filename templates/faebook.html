@@ -1,9 +1,8 @@
 <!doctype html>
-<title> {{ pageTitle  }} </title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')  }}">
-	{% for title, desc in title_list  %}
-		
+  <title> {{ pageTitle  }} </title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')  }}">
+	{% for title, desc in title_list  %}	
 		{% if title == "google" %}
                  <h1> Google </h1>
 		{% endif %}
@@ -13,12 +12,3 @@
 		</div>
 	{% endfor %}
 </html>
-
-
-
-
-
-
-
-
-
