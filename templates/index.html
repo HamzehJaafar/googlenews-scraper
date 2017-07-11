@@ -1,27 +1,26 @@
 <!doctype html>
 
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
-    
-    <ul class="nav navbar-nav">
-      <li class="active"><a href="/">Google News Scraper</a></li>
-      <li><a href="/google">Google</a></li>
-      <li><a href="/facebook">Facebook</a></li>
-      <li><a href="/microsoft">Microsoft</a></li>
-    </ul>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <ul class="nav navbar-nav">
+	<li class="active"><a href="/">Google News Scraper</a></li>
+	<li><a href="/google">Google</a></li>
+	<li><a href="/facebook">Facebook</a></li>
+	<li><a href="/microsoft">Microsoft</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <title> {{ pageTitle  }} </title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')  }}">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'index.css')  }}">
+
+  <div id="search">
+    <form  method="post">
+      <input name="search_term" type="text"  placeholder="News Search">
+      <button type="Submit" class="btn btn-primary btn-md">Search</button>
+    </form>
   </div>
-</nav>
-<title> {{ pageTitle  }} </title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'style.css')  }}">
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'index.css')  }}">
-
-<div id="search">
-<form  method="post">
-	<input name="search_term" type="text"  placeholder="News Search">
-	<button type="Submit" class="btn btn-primary btn-md">Search</button>
-</form>
-</div>
-
-
 </html>
