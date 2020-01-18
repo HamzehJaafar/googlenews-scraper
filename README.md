@@ -1,4 +1,4 @@
-http://hjaafar.pythonanywhere.com/
+http://hjaafar.pythonanywhere.com (offline)
 
 # Google News Webscraper 
 
