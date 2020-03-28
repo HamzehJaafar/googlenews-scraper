@@ -4,16 +4,13 @@ http://hjaafar.pythonanywhere.com (offline)
 
 GNW impersonates a news search engine by displaying the top 10 trending articles of a search query based on data scarped from Google News.
 
-## Getting Started
-
-
-### Prerequisites
+## Prerequisites
 
 Python 2.0+
 
 Flask
 
-### Installing
+## Installing
 
 Clone or download the repository.
 
